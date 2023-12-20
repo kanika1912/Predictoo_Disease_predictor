@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}home{% endblock title %}
+{% block body %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  
+  .fixed-width-col {
+    width: 200px; /* Set your desired width */
+  }
+</style>
+<div class="bg-dark">
+<h1 class="text-center text-white" >Your results are here!</h1>
+
+<h2 class="text-center text-white" >{{context}}</h2>
+</div>
+<div class="container-fluid my-7">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/static/photo8.avif" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/static/photo9.avif" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/static/photot7.avif" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="bg-dark">
+    <h2 class="text-center text-white" >Here are some common medications used in the management of Parkinson's disease:</h2>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <h4 class="text-center text-white">Levodopa (L-DOPA):</h4>
+        <p class=" text-white">Levodopa is one of the most effective medications for managing the motor symptoms of Parkinson's disease. It is converted into dopamine in the brain, compensating for the reduced levels of dopamine in individuals with Parkinson's.</p>
+      </div>
+      <div class="col-md-4 fixed-width-col ">
+        <h4 class="text-center text-white">MAO-B Inhibitors:</h4>
+        <p class=" text-white">Monoamine oxidase type B (MAO-B) inhibitors help increase dopamine levels by inhibiting the breakdown of dopamine in the brain. Examples include selegiline and rasagiline.</p>
+      </div>
+      <div class="col-md-4 fixed-width-col ">
+        <h4 class="text-center text-white">COMT Inhibitors:</h4>
+        <p class=" text-white">Catechol-O-methyltransferase (COMT) inhibitors extend the effects of levodopa by inhibiting its breakdown. An example is entacapone.</p>
+      </div>
+    </div>
+  
+    <!-- Row 2 -->
+    <div class="row">
+      <div class="col-md-4">
+        <h4 class="text-center text-white">Anticholinergics:</h4>
+        <p class=" text-white">These medications can help control tremors in some cases. Examples include trihexyphenidyl and benztropine.</p>
+      </div>
+      <div class="col-md-4 fixed-width-col ">
+        <h4 class="text-center text-white">Amantadine:</h4>
+        <p class=" text-white" >Amantadine may be used to help control tremors and dyskinesias (involuntary movements) associated with Parkinson's disease.</p>
+      </div>
+      <div class="col-md-4 fixed-width-col">
+        <h4 class="text-center text-white">Duopa:</h4>
+        <p class=" text-white">Duopa is a gel formulation of levodopa and carbidopa that is delivered directly into the small intestine through a pump. It is used for advanced stages of Parkinson's disease.</p>
+      </div>
+    </div>
+
+        
+{% endblock body %}

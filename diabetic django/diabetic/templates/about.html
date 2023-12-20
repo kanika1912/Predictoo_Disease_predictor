@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock title %}
+{% block body %}
+<style>
+  
+  .custom-image {
+    width: 350px; /* Set your desired width */
+    height: 200px; /* Set your desired height */
+  }
+</style>
+<div class="bg-dark">
+<h1 class="text-center text-white">Your Trusted Health Prediction Partner</h1>
+<div class="bg-dark">
+    <div class="container"> 
+      <h2 class="text-center text-white" >About Predictoo:</h2>
+      <p class="text-white">At Predictoo, we're not just another healthcare platform; we're your dedicated partner in making informed decisions about your health. We understand that health is your most precious asset, and we're here to provide you with cutting-edge tools and insights to protect and enhance it.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class= "text-center text-white" >Our Mission</h4>
+          <img src="/static/mission.avif" alt="Placeholder Image" class="custom-image">
+          <p class="text-white">Our mission is simple yet profound: we aim to empower individuals with the knowledge they need to take control of their health. In a world filled with uncertainties, we offer a beacon of clarity. We firmly believe that informed decisions lead to healthier lives, and we're committed to helping you achieve just that.</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-center text-white" >Meet Our Team of Experts</h4>
+          <img src="/static/team.avif" alt="Placeholder Image" class="custom-image">
+          <p class="text-white">Behind Predictoo is a team of experts with diverse backgrounds in data science, healthcare, and technology. Our data scientists are passionate about unraveling the complexities of health data, while our healthcare professionals bring decades of experience to ensure the utmost accuracy in our predictions. Our technologists, in turn, ensure that our platform is user-friendly and accessible to all.</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-center text-white" >Dedicated to Innovation</h4>
+          <img src="/static/dedication.avif" alt="Placeholder Image" class="custom-image">
+          <p class="text-white">In the ever-evolving field of healthcare data analysis, we're committed to staying at the forefront of innovation. Our team keeps a keen eye on the latest advancements, ensuring that our predictive models are always at the cutting edge of medical technology.</p>
+        </div>
+      </div>
+      <h4 class="text-center text-white" >Join Us on Our Health Predictions Journey</h4>
+      <p class="text-white">Thank you for considering Predictoo as your health predictions partner. We invite you to explore the rest of our website, try our predictive tools, and embark on a journey of better health outcomes. Your trust in us is the foundation of our commitment to your well-being.</p>
+
+    </div>
+    </div>
+  </div>
+{% endblock body %}

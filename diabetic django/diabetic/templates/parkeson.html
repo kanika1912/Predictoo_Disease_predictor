@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Parkinsson Prediction</h2>
+        <form action="{% url 'parkessonresult' %}" >
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="MDVP:Fo(Hz)">Average vocal fundamental frequency:</label>
+                <input type="number" class="form-control" id="MDVP:Fo(Hz)" placeholder="Enter MDVP:Fo(Hz)" name="MDVP:Fo(Hz)",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="MDVP:Fhi(Hz)">Maximum vocal fundamental frequency:</label>
+                <input type="number" class="form-control" id="MDVP:Fhi(Hz)" placeholder="Enter MDVP:Fhi(Hz)" name="MDVP:Fhi(Hz)",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="MDVP:Flo(Hz)">Minimum vocal fundamental frequency:</label>
+                <input type="number" class="form-control" id="MDVP:Flo(Hz)" placeholder="Enter MDVP:Flo(Hz)" name="MDVP:Flo(Hz)",step="0.1">
+            </div>
+            
+            <div class="form-group">
+                <label for="MDVP:Jitter(%)">MDVP:Jitter(%):</label>
+                <input type="number" class="form-control" id="MDVP:Jitter(%)" placeholder="Enter MDVP:Jitter(%)" name="MDVP:Jitter(%)",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="MDVP:Jitter(Abs)">MDVP:Jitter(Abs):</label>
+                <input type="number" class="form-control" id="MDVP:Jitter(Abs)" placeholder="Enter MDVP:Jitter(Abs)" name="MDVP:Jitter(Abs)",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="MDVP:RAP">MDVP:RAP:</label>
+                <input type="number" class="form-control" id="MDVP:RAP" placeholder="Enter MDVP:RAP" name="MDVP:RAP",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="MDVP:PPQ">MDVP:PPQ:</label>
+                <input type="number" class="form-control" id="MDVP:PPQ" placeholder="MDVP:PPQ" name="MDVP:PPQ",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="Jitter:DDP">Jitter:DDP</label>
+                <input type="number" class="form-control" id="Jitter:DDP" placeholder="Jitter:DDP" name="Jitter:DDP",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="MDVP:Shimmer">MDVP:Shimmer:</label>
+                <input type="number" class="form-control" id="MDVP:Shimmer" placeholder="MDVP:Shimmer" name="MDVP:Shimmer",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="MDVP:Shimmer(dB)">MDVP:Shimmer(dB):</label>
+                <input type="number" class="form-control" id="MDVP:Shimmer(dB)" placeholder="MDVP:Shimmer(dB)" name="MDVP:Shimmer(dB)",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="Shimmer:APQ3">Shimmer:APQ3:</label>
+                <input type="number" class="form-control" id="Shimmer:APQ3" placeholder="Shimmer:APQ3" name="Shimmer:APQ3",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="Shimmer:APQ5">Shimmer:APQ5:</label>
+                <input type="number" class="form-control" id="Shimmer:APQ5" placeholder="Shimmer:APQ5" name="Shimmer:APQ5",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="MDVP:APQ">MDVP:APQ:</label>
+                <input type="number" class="form-control" id="MDVP:APQ" placeholder="MDVP:APQ" name="MDVP:APQ",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="Shimmer:DDA">Shimmer:DDA :</label>
+                <input type="number" class="form-control" id="Shimmer:DDA" placeholder="Shimmer:DDA" name="Shimmer:DDA",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="NHR">NHR :</label>
+                <input type="number" class="form-control" id="NHR" placeholder="NHR" name="NHR",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="HNR">HNR :</label>
+                <input type="number" class="form-control" id="HNR" placeholder="HNR" name="HNR",step="0.1">
+            </div>
+            
+            <div class="form-group">
+                <label for="RPDE">RPDE:</label>
+                <input type="number" class="form-control" id="RPDE" placeholder="RPDE" name="RPDE",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="DFA">DFA:</label>
+                <input type="number" class="form-control" id="DFA" placeholder="DFA" name="DFA",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="spread1">spread1:</label>
+                <input type="number" class="form-control" id="spread1" placeholder="spread1" name="spread1",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="spread2">spread2:</label>
+                <input type="number" class="form-control" id="spread2" placeholder="spread2" name="spread2",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="D2">D2:</label>
+                <input type="number" class="form-control" id="D2" placeholder="D2" name="D2",step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="PPE">PPE:</label>
+                <input type="number" class="form-control" id="PPE" placeholder="PPE" name="PPE",step="0.1">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    <p id="predictionResult">Prediction result will appear here.</p>
+
+    </div>
+</body>

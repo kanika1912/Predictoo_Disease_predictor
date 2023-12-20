@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}home{% endblock title %}
+{% block body %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  
+  .fixed-width-col {
+    width: 200px; /* Set your desired width */
+  }
+</style>
+<div class="bg-dark">
+<h1 class="text-center text-white" >Your results are here!</h1>
+
+<h2 class="text-center text-white" >{{context}}</h2>
+</div>
+<div class="container-fluid my-7">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/static/heart1.avif" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/static/heart2avif.avif" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/static/heart3.avif" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="bg-dark">
+    <h2 class="text-center text-white" >Here are some general recommendations that may be applicable:</h2>
+    <br>
+    <br>
+    <div class="container">
+      <!-- Row 1 -->
+      <div class="row">
+        <div class="col-md-4">
+          <h3 class="text-center text-white">Regular Medical Checkups:</h3>
+          <p class=" text-white">Individuals with heart defects should schedule regular checkups with their healthcare providers. These checkups may include physical examinations, imaging tests, and other diagnostic procedures to monitor heart function.</p>
+        </div>
+        <div class="col-md-4 fixed-width-col">
+          <h3 class="text-center text-white">Medication Management:</h3>
+            <p class=" text-white">Depending on the type of heart defect and associated conditions, medications may be prescribed to manage symptoms, control blood pressure, prevent blood clots, or address other cardiovascular issues.</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-center text-white">Lifestyle Modifications:</h4>
+          <p class=" text-white">Adopting a heart-healthy lifestyle is crucial. This includes maintaining a balanced and nutritious diet, engaging in regular physical activity, avoiding tobacco and excessive alcohol consumption, and managing stress.</p>
+        </div>
+      </div>
+        
+    
+      <!-- Row 2 -->
+      <div class="row">
+        
+      
+        <div class="col-md-4 fixed-width-col">
+          <h4 class="text-center text-white">Cardiac Rehabilitation:</h4>
+          <p class=" text-white">In some cases, individuals with heart defects may benefit from cardiac rehabilitation programs. These programs typically include supervised exercise, education on heart-healthy living, and support for emotional well-being.</p>
+        </div>
+      
+      
+        <div class="col-md-4 ">
+          <h4 class="text-center text-white">Surgical Interventions:</h4>
+          <p class=" text-white" >Depending on the severity of the heart defect, surgery may be recommended. Surgical interventions can include repairing or replacing heart valves, closing holes in the heart, or other procedures aimed at improving cardiac function.</p>
+        </div>
+        <div class="col-md-4 fixed-width-col">
+          <h4 class="text-center text-white">Endocarditis Prevention:</h4>
+          <p class=" text-white">Individuals with certain heart defects may be at an increased risk of developing infective endocarditis, an infection of the heart's inner lining. In some cases, prophylactic antibiotics may be recommended before certain dental or medical procedures to reduce the risk of infection.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+
+{% endblock body %}

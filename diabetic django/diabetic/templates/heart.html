@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Heart Disease Prediction</h2>
+        <form action="{% url 'heartresult' %}" >
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" placeholder="Enter age" name="age">
+            </div>
+            <div class="form-group">
+                <label for="sex">Sex:</label>
+                <select class="form-control" id="sex" name="sex">
+                    <option value=1 >Male</option>
+                    <option value=0 >Female</option>
+                </select>
+            </div>
+            <div class="form-group" >
+                <label for="cp">Chest Pain Type:</label>
+                <select class="form-control" id="cp" name="cp">
+                    <option value=0 >Typical Angina</option>
+                    <option value=1 >Atypical Angina</option>
+                    <option value=2 >Non-Anginal Pain</option>
+                    <option value=3 >Asymptomatic</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="trestbps">Resting Blood Pressure:</label>
+                <input type="number" class="form-control" id="trestbps" placeholder="Enter resting blood pressure" name="trestbps">
+            </div>
+            <div class="form-group">
+                <label for="chol">Cholestrol:</label>
+                <input type="number" class="form-control" id="chol" placeholder="Enter Cholestrol" name="chol">
+            </div>
+            <div class="form-group">
+                <label for="fbs">fasting blood sugar:</label>
+                <select class="form-control" id="fbs" name="fbs">
+                    <option value=1 >True</option>
+                    <option value=0 >False</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="restecg">resting electrocardiographic results:</label>
+                <select class="form-control" id="restecg" name="restecg">
+                    <option value=0 >0</option>
+                    <option value=1 >1</option>
+                    <option value=2 >2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="thalach">maximum heart rate achieved:</label>
+                <input type="number" class="form-control" id="thalach" placeholder="Enter maximum heart rate achieved" name="thalach">
+            </div>
+            <div class="form-group">
+                <label for="exang">exercise induced angina:</label>
+                <select class="form-control" id="exang" name="exang">
+                    <option value=1 >Yes</option>
+                    <option value=0 >No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="oldpeak">ST depression induced by exercise relative to rest:</label>
+                <input type="number" class="form-control" id="oldpeak" placeholder="Enter ST depression induced by exercise relative to rest" name="thalach">
+            </div>
+            <div class="form-group">
+                <label for="slope">the slope of the peak exercise ST segment:</label>
+                <select class="form-control" id="slope" name="slope">
+                    <option value=1 >1</option>
+                    <option value=2 >2</option>
+                    <option value=3 >3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ca">number of major vessels:</label>
+                <select class="form-control" id="ca" name="ca">
+                    <option value=0 >0</option>
+                    <option value=1 >1</option>
+                    <option value=2 >2</option>
+                    <option value=3 >3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="thal">thal:</label>
+                <select class="form-control" id="thal" name="thal">
+                    <option value=3 >normal</option>
+                    <option value=6 >fixed defect</option>
+                    <option value=7 >reversable defect</option>
+                </select>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    <p id="predictionResult">Prediction result will appear here.</p>
+
+    </div>
+</body>

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}home{% endblock title %}
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-LC5vPmOUOTBfi6C2Gp0GjkbbPWpDJzrs5k3O27FJ5UpN1lXSM9Rmbd5Lu2JCpYl" crossorigin="anonymous">
+{% endblock head %}
+
+{% block body %}
+
+
+<div class="bg-dark">
+<div class="container-fluid my-7"> 
+  <h1 class="text-center text-white" >Welcome to Predictoo - Your Health Prediction Partner!</h2>
+  
+
+  <p class="text-white">At Predictoo, we're dedicated to improving healthcare outcomes by harnessing the power of cutting-edge technology. 
+    Our mission is to provide accurate and accessible health predictions to individuals, empowering them to make informed decisions about their well-being..
+    Whether you're looking for diabetes risk assessment, Parkinson's disease prediction, or insights into heart health, our machine learning models are here to help. Simply provide the necessary input parameters, and let our models provide you with the valuable information you need to take control of your health.
+  
+  Welcome to a world of precise medical predictions, powered by SVM and dedicated to your well-being. Begin your journey with us today.
+  Accuracy is paramount in healthcare, and that's precisely what SVM delivers. Our SVM-based models have been extensively validated to guarantee their precision and reliability. You can rely on the results produced by our predictive tools, knowing that they are rooted in sound scientific principles and data-driven insights.</p>
+  </div>
+<div class="container-fluid my-7">
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/8old.avif" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/4.old.avif" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/3old.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+  <p class="text-center text-white">&copy; Predictoo - Your Health Predictions Partner!. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/your_instagram_username" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/your_facebook_page" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+</footer>
+</div>
+
+
+{% endblock body %}
